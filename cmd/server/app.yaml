@@ -1,0 +1,16 @@
+runtime: go114
+service: mercury-poc
+automatic_scaling:
+  max_instances: 600
+  max_concurrent_requests: 80
+  min_idle_instances: 1
+
+inbound_services:
+  - warmup
+
+instance_class: F4
+
+#vpc_access_connector:
+#  name: "projects/nyt-messaging-dev/locations/us-east1/connectors/memorystore"
+
+env_variables:
